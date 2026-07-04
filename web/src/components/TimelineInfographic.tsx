@@ -7,7 +7,7 @@ const LANES = [
 ];
 
 const START = new Date("2023-10-01").getTime();
-const END = new Date("2026-04-30").getTime();
+const END = new Date("2026-07-31").getTime();
 const SPAN = END - START;
 
 function xPercent(sortKey: string): number {

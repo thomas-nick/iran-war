@@ -315,6 +315,114 @@ tr:hover td {
   color: var(--text);
 }
 
+.current-status {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid #f39c12;
+  border-radius: 12px;
+  padding: 1.25rem 1.35rem 1.35rem;
+  margin-bottom: 1.5rem;
+}
+
+.current-status-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.current-status-eyebrow {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.current-status h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.current-status-phase {
+  font-size: 0.88rem;
+  color: #f39c12;
+  font-weight: 500;
+}
+
+.current-status-summary {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.status-indicator-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.65rem;
+  margin-bottom: 1.1rem;
+}
+
+.status-indicator {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.65rem 0.75rem;
+}
+
+.status-indicator.caution {
+  border-color: rgba(243, 156, 18, 0.45);
+}
+
+.status-indicator.positive {
+  border-color: rgba(26, 188, 156, 0.45);
+}
+
+.status-indicator-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.status-indicator-value {
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.current-status-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.current-status-columns h3 {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.55rem;
+}
+
+.status-watch-list,
+.status-source-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.status-watch-list li + li,
+.status-source-list li + li {
+  margin-top: 0.35rem;
+}
+
 .panel-note {
   font-size: 0.82rem;
   color: var(--muted);

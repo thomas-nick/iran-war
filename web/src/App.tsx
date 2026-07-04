@@ -19,6 +19,7 @@ import { formatEstimateBand, formatEstimateRow } from "./lib/formatEstimate";
 import { TimelinePanel } from "./components/TimelinePanel";
 import { OsintWavesPanel } from "./components/OsintWavesPanel";
 import { OperationsView } from "./components/OperationsView";
+import { CurrentStatusPanel } from "./components/CurrentStatusPanel";
 import type { CategorySummary, DashboardData, Missile } from "./types";
 
 const COUNTRY_COLORS: Record<string, string> = {
@@ -261,6 +262,8 @@ export default function App() {
           .
         </p>
       </header>
+
+      {data.currentStatus && <CurrentStatusPanel status={data.currentStatus} />}
 
       <div className="tabs">
         {(

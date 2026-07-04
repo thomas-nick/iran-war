@@ -7,3 +7,4 @@ dist/
 data/osint/
 *.log
 .DS_Store
+.vercel

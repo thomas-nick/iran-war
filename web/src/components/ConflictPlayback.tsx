@@ -4,7 +4,7 @@ import { ConflictMap } from "./ConflictMap";
 import { TimelineInfographic } from "./TimelineInfographic";
 
 const PLAYBACK_START = new Date("2023-10-01T00:00:00Z").getTime();
-const PLAYBACK_END = new Date("2026-05-24T00:00:00Z").getTime();
+const PLAYBACK_END = new Date("2026-07-04T00:00:00Z").getTime();
 const DAY_MS = 86_400_000;
 
 function sortKeyToMs(sortKey: string): number {

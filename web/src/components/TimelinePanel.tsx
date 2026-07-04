@@ -54,7 +54,7 @@ export function TimelinePanel({ events, stats, filter, onFilterChange }: Timelin
           >
             Kaggle — iran-usa-conflict-2023-2026
           </a>
-          . This dataset describes <strong>{stats.totalEvents} events</strong> from Oct 2023–Apr 2026,
+          . This dataset describes <strong>{stats.totalEvents} events</strong> from Oct 2023–Jul 2026,
           including <strong>{stats.usStrikeEvents} documented US military strikes</strong>.
           It adds context and descriptions but does not include per-strike numeric counts — those
           come from the separate Iran–Israel statistics dataset on the Overview tab.

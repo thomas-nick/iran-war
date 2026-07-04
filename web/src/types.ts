@@ -390,6 +390,27 @@ export interface CategorySummary {
   systems: string[];
 }
 
+export interface CurrentStatusIndicator {
+  label: string;
+  value: string;
+  tone: "neutral" | "caution" | "positive";
+}
+
+export interface CurrentStatusSource {
+  label: string;
+  url: string;
+}
+
+export interface CurrentStatus {
+  asOf: string;
+  headline: string;
+  summary: string;
+  phase: string;
+  indicators: CurrentStatusIndicator[];
+  watchItems: string[];
+  sources: CurrentStatusSource[];
+}
+
 export interface DashboardData {
   meta: {
     conflictSource: string;
@@ -428,4 +449,5 @@ export interface DashboardData {
     }>;
     categorySummary: CategorySummary[];
   };
+  currentStatus?: CurrentStatus;
 }

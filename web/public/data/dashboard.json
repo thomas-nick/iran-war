@@ -9,7 +9,7 @@
     "geojsonPath": "/data/conflict.geojson",
     "missileSource": "GlobalMilitary.net missiles + bombs",
     "bombCatalogUrl": "https://www.globalmilitary.net/bombs/",
-    "missileSeedDate": "2026-05-24",
+    "missileSeedDate": "2026-07-04",
     "categories": [
       "Air-to-Surface",
       "Ballistic",
@@ -997,10 +997,172 @@
       "involvesIsrael": false,
       "involvesUs": true,
       "relatedStats": []
+    },
+    {
+      "id": 28,
+      "date": "April 8 2026",
+      "year": 2026,
+      "event": "Pakistan-Brokered Ceasefire Takes Effect",
+      "category": "Diplomacy",
+      "keyActors": "Pakistan / United States / Iran",
+      "location": "Islamabad / Geneva",
+      "description": "Pakistan secured an initial ceasefire halting the heaviest US-Israeli and Iranian exchanges. Mediators opened a channel for direct talks.",
+      "impactOutcome": "Reduced intensity after March peak; set stage for Islamabad process",
+      "sortKey": 20260408,
+      "isUsAction": true,
+      "isUsStrike": false,
+      "involvesIran": true,
+      "involvesIsrael": false,
+      "involvesUs": true,
+      "relatedStats": []
+    },
+    {
+      "id": 29,
+      "date": "April 12\u201313 2026",
+      "year": 2026,
+      "event": "First US\u2013Iran Direct Talks Since War Began",
+      "category": "Diplomacy",
+      "keyActors": "United States / Iran",
+      "location": "Pakistan / indirect",
+      "description": "Highest-level US-Iran engagement since diplomatic ties severed in 1979 hosted with Pakistani facilitation.",
+      "impactOutcome": "First formal diplomacy since Operation Epic Fury",
+      "sortKey": 20260412,
+      "isUsAction": true,
+      "isUsStrike": false,
+      "involvesIran": true,
+      "involvesIsrael": false,
+      "involvesUs": true,
+      "relatedStats": []
+    },
+    {
+      "id": 30,
+      "date": "May\u2013June 2026",
+      "year": 2026,
+      "event": "Post-Ceasefire Friction Over Strait of Hormuz",
+      "category": "Economic Warfare",
+      "keyActors": "Iran / United States",
+      "location": "Strait of Hormuz / Persian Gulf",
+      "description": "Tit-for-tat incidents over commercial shipping and blockade enforcement persisted despite truce efforts. Iran targeted vessels it said strayed from approved routes; US Central Command struck Iranian military sites.",
+      "impactOutcome": "Oil markets remained volatile; trust in ceasefire fragile",
+      "sortKey": 20260531,
+      "isUsAction": true,
+      "isUsStrike": false,
+      "involvesIran": true,
+      "involvesIsrael": false,
+      "involvesUs": true,
+      "relatedStats": []
+    },
+    {
+      "id": 31,
+      "date": "June 12 2026",
+      "year": 2026,
+      "event": "US and Iran Agree Final MOU Text",
+      "category": "Diplomacy",
+      "keyActors": "United States / Iran / Pakistan / Qatar",
+      "location": "Islamabad / Geneva",
+      "description": "Washington and Tehran reached agreed final language for a framework to end the war brokered primarily by Pakistan with Qatar Saudi Arabia Turkey and Egypt.",
+      "impactOutcome": "Opened path to formal Islamabad Memorandum signing",
+      "sortKey": 20260612,
+      "isUsAction": true,
+      "isUsStrike": false,
+      "involvesIran": true,
+      "involvesIsrael": false,
+      "involvesUs": true,
+      "relatedStats": []
+    },
+    {
+      "id": 32,
+      "date": "June 17\u201318 2026",
+      "year": 2026,
+      "event": "Islamabad Memorandum Signed \u2014 60-Day Roadmap",
+      "category": "Diplomacy",
+      "keyActors": "Donald Trump / Masoud Pezeshkian / Pakistan mediators",
+      "location": "Islamabad / Tehran / Versailles",
+      "description": "14-point MOU declares immediate end to military operations on all fronts including Lebanon; mandates Hormuz reopening 60-day window for final deal and nuclear/sanctions negotiations.",
+      "impactOutcome": "Largest diplomatic milestone since war began; ceasefire extended institutionally",
+      "sortKey": 20260617,
+      "isUsAction": false,
+      "isUsStrike": false,
+      "involvesIran": false,
+      "involvesIsrael": false,
+      "involvesUs": false,
+      "relatedStats": []
+    },
+    {
+      "id": 33,
+      "date": "June 2026",
+      "year": 2026,
+      "event": "Burgenstock Summit \u2014 De-confliction & Working Groups",
+      "category": "Diplomacy",
+      "keyActors": "United States / Iran / Qatar / Pakistan",
+      "location": "B\u00fcrgenstock / Lake Lucerne",
+      "description": "Switzerland hosted implementation talks establishing a Lebanon de-confliction cell and working groups on nuclear issues sanctions and dispute resolution.",
+      "impactOutcome": "Created institutional follow-through beyond initial MOU",
+      "sortKey": 20260634,
+      "isUsAction": true,
+      "isUsStrike": false,
+      "involvesIran": true,
+      "involvesIsrael": false,
+      "involvesUs": true,
+      "relatedStats": []
+    },
+    {
+      "id": 34,
+      "date": "Late June 2026",
+      "year": 2026,
+      "event": "Post-MOU Military Incidents \u2014 Hormuz and Gulf Bases",
+      "category": "Direct Military Conflict",
+      "keyActors": "Iran / United States",
+      "location": "Kuwait / Bahrain / Strait of Hormuz",
+      "description": "Iran struck US bases in Kuwait and Bahrain; US retaliated against Iranian missile and drone storage sites after Hormuz shipping disputes. Both sides accused the other of violating the MOU.",
+      "impactOutcome": "Tested durability of ceasefire; Gulf states condemned Iranian strikes",
+      "sortKey": 20260635,
+      "isUsAction": true,
+      "isUsStrike": false,
+      "involvesIran": true,
+      "involvesIsrael": false,
+      "involvesUs": true,
+      "relatedStats": []
+    },
+    {
+      "id": 35,
+      "date": "July 1\u20133 2026",
+      "year": 2026,
+      "event": "Doha Technical Talks \u2014 MOU Implementation",
+      "category": "Diplomacy",
+      "keyActors": "United States / Iran / Qatar / Pakistan",
+      "location": "Doha",
+      "description": "Qatari and Pakistani mediators held technical sessions on Hormuz navigation nuclear issues and a US-Iran hotline to report MOU violations. Talks paused until after Khamenei funeral.",
+      "impactOutcome": "Diplomacy continuing but no comprehensive final deal yet",
+      "sortKey": 20260701,
+      "isUsAction": true,
+      "isUsStrike": false,
+      "involvesIran": true,
+      "involvesIsrael": false,
+      "involvesUs": true,
+      "relatedStats": []
+    },
+    {
+      "id": 36,
+      "date": "July 4 2026",
+      "year": 2026,
+      "event": "Khamenei Funeral Processions Begin",
+      "category": "Political Transition",
+      "keyActors": "Iran / international dignitaries",
+      "location": "Tehran / Iraq / Qom",
+      "description": "Multi-day funeral ceremonies for former Supreme Leader Ali Khamenei (killed Feb 28) began in Tehran. Iran vowed to seek justice against US and Israel.",
+      "impactOutcome": "Domestic consolidation under Mojtaba Khamenei; diplomacy on hold during mourning period",
+      "sortKey": 20260704,
+      "isUsAction": false,
+      "isUsStrike": false,
+      "involvesIran": true,
+      "involvesIsrael": false,
+      "involvesUs": false,
+      "relatedStats": []
     }
   ],
   "timelineStats": {
-    "totalEvents": 28,
+    "totalEvents": 37,
     "usStrikeEvents": 3,
     "usStrikeNames": [
       "US Airstrikes on Iran-backed Facilities",
@@ -1017,13 +1179,13 @@
       "Direct Israel\u2013Iran Conflict": 1,
       "US Policy": 1,
       "Domestic Crisis": 2,
-      "Direct Military Conflict": 3,
+      "Direct Military Conflict": 4,
       "Domestic Crisis / Human Rights": 1,
       "US Political Action": 2,
-      "Diplomacy": 2,
+      "Diplomacy": 8,
       "Iranian Military Action": 1,
-      "Political Transition": 1,
-      "Economic Warfare": 1,
+      "Political Transition": 2,
+      "Economic Warfare": 2,
       "US Military Threat": 1
     }
   },
@@ -47431,7 +47593,7 @@
   "geojson": {
     "type": "FeatureCollection",
     "metadata": {
-      "generated": "2026-05-24",
+      "generated": "2026-07-04",
       "featureCount": 2441,
       "layers": [
         "iran_attack_arc",
@@ -93842,6 +94004,105 @@
       "usTargeted": false
     },
     {
+      "id": "tl-36",
+      "kind": "narrative",
+      "sortKey": "000020260704",
+      "dateLabel": "July 4 2026",
+      "year": 2026,
+      "title": "Khamenei Funeral Processions Begin",
+      "subtitle": "Political Transition",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-35",
+      "kind": "narrative",
+      "sortKey": "000020260701",
+      "dateLabel": "July 1\u20133 2026",
+      "year": 2026,
+      "title": "Doha Technical Talks \u2014 MOU Implementation",
+      "subtitle": "Diplomacy",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-34",
+      "kind": "narrative",
+      "sortKey": "000020260635",
+      "dateLabel": "Late June 2026",
+      "year": 2026,
+      "title": "Post-MOU Military Incidents \u2014 Hormuz and Gulf Bases",
+      "subtitle": "Direct Military Conflict",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-33",
+      "kind": "narrative",
+      "sortKey": "000020260634",
+      "dateLabel": "June 2026",
+      "year": 2026,
+      "title": "Burgenstock Summit \u2014 De-confliction & Working Groups",
+      "subtitle": "Diplomacy",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-32",
+      "kind": "narrative",
+      "sortKey": "000020260617",
+      "dateLabel": "June 17\u201318 2026",
+      "year": 2026,
+      "title": "Islamabad Memorandum Signed \u2014 60-Day Roadmap",
+      "subtitle": "Diplomacy",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-31",
+      "kind": "narrative",
+      "sortKey": "000020260612",
+      "dateLabel": "June 12 2026",
+      "year": 2026,
+      "title": "US and Iran Agree Final MOU Text",
+      "subtitle": "Diplomacy",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-30",
+      "kind": "narrative",
+      "sortKey": "000020260531",
+      "dateLabel": "May\u2013June 2026",
+      "year": 2026,
+      "title": "Post-Ceasefire Friction Over Strait of Hormuz",
+      "subtitle": "Economic Warfare",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-29",
+      "kind": "narrative",
+      "sortKey": "000020260412",
+      "dateLabel": "April 12\u201313 2026",
+      "year": 2026,
+      "title": "First US\u2013Iran Direct Talks Since War Began",
+      "subtitle": "Diplomacy",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-28",
+      "kind": "narrative",
+      "sortKey": "000020260408",
+      "dateLabel": "April 8 2026",
+      "year": 2026,
+      "title": "Pakistan-Brokered Ceasefire Takes Effect",
+      "subtitle": "Diplomacy",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
       "id": "tl-27",
       "kind": "narrative",
       "sortKey": "000020260406",
@@ -96698,6 +96959,69 @@
           "Delilah",
           "Rampage"
         ]
+      }
+    ]
+  },
+  "currentStatus": {
+    "asOf": "2026-07-04",
+    "headline": "Fragile ceasefire under Islamabad Memorandum",
+    "summary": "The Feb\u2013Mar 2026 hot war has shifted to a negotiated pause. The Islamabad Memorandum (signed June 17\u201318) established a 60-day roadmap, Hormuz reopening commitments, and Lebanon de-confliction \u2014 but tit-for-tat incidents and Doha technical talks show implementation remains contested.",
+    "phase": "Diplomacy & implementation",
+    "indicators": [
+      {
+        "label": "Ceasefire framework",
+        "value": "Islamabad MOU (14 points)",
+        "tone": "caution"
+      },
+      {
+        "label": "MOU signed",
+        "value": "June 17\u201318, 2026",
+        "tone": "neutral"
+      },
+      {
+        "label": "Final deal window",
+        "value": "60 days (extendable)",
+        "tone": "neutral"
+      },
+      {
+        "label": "Strait of Hormuz",
+        "value": "Reopening pledged; incidents continue",
+        "tone": "caution"
+      },
+      {
+        "label": "Lebanon front",
+        "value": "De-confliction cell; IDF\u2013Hezbollah clashes",
+        "tone": "caution"
+      },
+      {
+        "label": "Latest diplomacy",
+        "value": "Doha talks (Jul 1\u20133); paused for funeral",
+        "tone": "neutral"
+      }
+    ],
+    "watchItems": [
+      "US\u2013Iran hotline for MOU violation reporting (established post-Doha)",
+      "Khamenei funeral processions (Jul 4\u20139) \u2014 diplomacy on hold",
+      "Iran warnings of proportionate response if MOU breached",
+      "Israel\u2013Hezbollah fighting in southern Lebanon despite MOU Lebanon clause",
+      "Post-MOU strikes: US bases in Kuwait/Bahrain; US retaliatory Gulf strikes"
+    ],
+    "sources": [
+      {
+        "label": "ISW Iran Update (Jul 3, 2026)",
+        "url": "https://understandingwar.org/research/middle-east/iran-update-special-report-july-3-2026/"
+      },
+      {
+        "label": "Al Jazeera \u2014 Doha talks",
+        "url": "https://www.aljazeera.com/news/2026/7/2/us-iran-talks-in-doha-what-were-the-outcomes-and-whats-next"
+      },
+      {
+        "label": "CNN \u2014 Islamabad MOU text",
+        "url": "https://www.cnn.com/2026/06/17/middleeast/us-iran-war-mou-text-intl"
+      },
+      {
+        "label": "BBC \u2014 MOU full text",
+        "url": "https://www.bbc.co.uk/news/articles/c4gy700j0eko"
       }
     ]
   }

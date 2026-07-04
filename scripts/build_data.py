@@ -1656,6 +1656,79 @@ def build_cross_reference(
     }
 
 
+def build_current_status() -> dict[str, Any]:
+    """Curated snapshot of the post-MOU diplomatic and military situation."""
+    today = date.today()
+    return {
+        "asOf": str(today),
+        "headline": "Fragile ceasefire under Islamabad Memorandum",
+        "summary": (
+            "The Feb–Mar 2026 hot war has shifted to a negotiated pause. The Islamabad "
+            "Memorandum (signed June 17–18) established a 60-day roadmap, Hormuz reopening "
+            "commitments, and Lebanon de-confliction — but tit-for-tat incidents and Doha "
+            "technical talks show implementation remains contested."
+        ),
+        "phase": "Diplomacy & implementation",
+        "indicators": [
+            {
+                "label": "Ceasefire framework",
+                "value": "Islamabad MOU (14 points)",
+                "tone": "caution",
+            },
+            {
+                "label": "MOU signed",
+                "value": "June 17–18, 2026",
+                "tone": "neutral",
+            },
+            {
+                "label": "Final deal window",
+                "value": "60 days (extendable)",
+                "tone": "neutral",
+            },
+            {
+                "label": "Strait of Hormuz",
+                "value": "Reopening pledged; incidents continue",
+                "tone": "caution",
+            },
+            {
+                "label": "Lebanon front",
+                "value": "De-confliction cell; IDF–Hezbollah clashes",
+                "tone": "caution",
+            },
+            {
+                "label": "Latest diplomacy",
+                "value": "Doha talks (Jul 1–3); paused for funeral",
+                "tone": "neutral",
+            },
+        ],
+        "watchItems": [
+            "US–Iran hotline for MOU violation reporting (established post-Doha)",
+            "Khamenei funeral processions (Jul 4–9) — diplomacy on hold",
+            "Iran warnings of proportionate response if MOU breached",
+            "Israel–Hezbollah fighting in southern Lebanon despite MOU Lebanon clause",
+            "Post-MOU strikes: US bases in Kuwait/Bahrain; US retaliatory Gulf strikes",
+        ],
+        "sources": [
+            {
+                "label": "ISW Iran Update (Jul 3, 2026)",
+                "url": "https://understandingwar.org/research/middle-east/iran-update-special-report-july-3-2026/",
+            },
+            {
+                "label": "Al Jazeera — Doha talks",
+                "url": "https://www.aljazeera.com/news/2026/7/2/us-iran-talks-in-doha-what-were-the-outcomes-and-whats-next",
+            },
+            {
+                "label": "CNN — Islamabad MOU text",
+                "url": "https://www.cnn.com/2026/06/17/middleeast/us-iran-war-mou-text-intl",
+            },
+            {
+                "label": "BBC — MOU full text",
+                "url": "https://www.bbc.co.uk/news/articles/c4gy700j0eko",
+            },
+        ],
+    }
+
+
 def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     missiles = load_missiles()
@@ -1719,6 +1792,7 @@ def main() -> None:
         "munitionsEstimates": munitions_estimates,
         "missiles": missiles,
         "crossReference": cross_ref,
+        "currentStatus": build_current_status(),
     }
 
     out_path = OUT_DIR / "dashboard.json"
