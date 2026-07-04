@@ -1,0 +1,9 @@
+{
+  "name": "oreshnik",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix web",
+    "build": "npm run build --prefix web",
+    "data": "python3 scripts/build_data.py"
+  }
+}

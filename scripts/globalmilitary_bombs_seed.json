@@ -1,0 +1,20 @@
+[
+  {"name": "GBU-31 JDAM", "countries": ["United States", "Israel"], "category": "Guided Bomb", "rangeText": "28 km", "maxSpeedText": "—", "sourceUrl": "https://www.globalmilitary.net/bombs/gbu-31-jdam/"},
+  {"name": "GBU-32 JDAM", "countries": ["United States"], "category": "Guided Bomb", "rangeText": "28 km", "maxSpeedText": "—", "sourceUrl": "https://www.globalmilitary.net/bombs/gbu-32-jdam/"},
+  {"name": "GBU-38 JDAM", "countries": ["United States"], "category": "Guided Bomb", "rangeText": "28 km", "maxSpeedText": "—", "sourceUrl": "https://www.globalmilitary.net/bombs/gbu-38-jdam/"},
+  {"name": "GBU-39 SDB", "countries": ["United States", "Israel"], "category": "Glide Bomb", "rangeText": "110 km", "maxSpeedText": "—", "sourceUrl": "https://www.globalmilitary.net/bombs/gbu-39-sdb/"},
+  {"name": "GBU-57 MOP", "countries": ["United States"], "category": "Penetration Bomb", "rangeText": "—", "maxSpeedText": "—", "sourceUrl": "https://www.globalmilitary.net/bombs/gbu-57-mop/"},
+  {"name": "GBU-28", "countries": ["United States", "Israel"], "category": "Penetration Bomb", "rangeText": "—", "maxSpeedText": "—", "sourceUrl": "https://www.globalmilitary.net/bombs/gbu-28/"},
+  {"name": "BLU-109", "countries": ["United States", "Israel"], "category": "Penetration Bomb", "rangeText": "—", "maxSpeedText": "—", "sourceUrl": "https://www.globalmilitary.net/bombs/blu-109/"},
+  {"name": "BLU-118", "countries": ["United States"], "category": "Penetration Bomb", "rangeText": "—", "maxSpeedText": "—", "sourceUrl": "https://www.globalmilitary.net/bombs/blu-118/"},
+  {"name": "Mk 81", "countries": ["United States", "Iran"], "category": "Unguided Bomb", "rangeText": "—", "maxSpeedText": "—", "sourceUrl": "https://www.globalmilitary.net/bombs/mk-81/"},
+  {"name": "Mk 82", "countries": ["United States", "Israel"], "category": "Unguided Bomb", "rangeText": "—", "maxSpeedText": "—", "sourceUrl": "https://www.globalmilitary.net/bombs/mk-82/"},
+  {"name": "Mk 83", "countries": ["United States", "Israel"], "category": "Unguided Bomb", "rangeText": "—",
+   "maxSpeedText": "—", "sourceUrl": "https://www.globalmilitary.net/bombs/mk-83/"},
+  {"name": "Mk 84", "countries": ["United States", "Israel"], "category": "Unguided Bomb", "rangeText": "—", "maxSpeedText": "—", "sourceUrl": "https://www.globalmilitary.net/bombs/mk-84/"},
+  {"name": "GBU-24 Paveway III", "countries": ["United States", "Israel"], "category": "Guided Bomb", "rangeText": "—", "maxSpeedText": "—", "sourceUrl": "https://www.globalmilitary.net/bombs/gbu-24-paveway-iii/"},
+  {"name": "GBU-27 Paveway III", "countries": ["United States", "Israel"], "category": "Guided Bomb", "rangeText": "—", "maxSpeedText": "—", "sourceUrl": "https://www.globalmilitary.net/bombs/gbu-27-paveway-iii/"},
+  {"name": "Paveway IV", "countries": ["United Kingdom"], "category": "Guided Bomb", "rangeText": "—", "maxSpeedText": "—", "sourceUrl": "https://www.globalmilitary.net/bombs/paveway-iv/"},
+  {"name": "JDAM-ER", "countries": ["United States", "Australia"], "category": "Glide Bomb", "rangeText": "80 km", "maxSpeedText": "—", "sourceUrl": "https://www.globalmilitary.net/bombs/jdam-er/"},
+  {"name": "GBU-62 QUICKSINK", "countries": ["United States"], "category": "Guided Bomb", "rangeText": "—", "maxSpeedText": "—", "sourceUrl": "https://www.globalmilitary.net/bombs/gbu-62-quicksink/"}
+]

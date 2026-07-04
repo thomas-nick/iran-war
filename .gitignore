@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.venv/
+.kaggle/
+.env
+.env.local
+data/osint/
+*.log
+.DS_Store
