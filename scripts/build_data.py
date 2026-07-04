@@ -1458,6 +1458,20 @@ def _iso_sort_key(iso: str | None, fallback: int = 0) -> str:
     return iso or f"9999-12-31-{fallback:04d}"
 
 
+def _timeline_sort_key_to_iso(sort_key: int | str, year: int) -> str:
+    """Convert YYYYMMDD-style timeline sort keys to ISO dates for the infographic."""
+    import calendar
+
+    sk = int(sort_key) if sort_key else year * 10000
+    y = sk // 10000
+    m = (sk // 100) % 100
+    d = sk % 100
+    m = max(1, min(12, m))
+    max_day = calendar.monthrange(y, m)[1]
+    d = max(1, min(max_day, d))
+    return f"{y:04d}-{m:02d}-{d:02d}"
+
+
 def build_infographic_events(
     timeline: list[dict[str, Any]],
     waves: list[dict[str, Any]],
@@ -1466,11 +1480,12 @@ def build_infographic_events(
     events: list[dict[str, Any]] = []
 
     for item in timeline:
+        iso_date = _timeline_sort_key_to_iso(item.get("sortKey", item["year"] * 10000), item["year"])
         events.append(
             {
                 "id": f"tl-{item['id']}",
                 "kind": "narrative",
-                "sortKey": str(item.get("sortKey", item["year"] * 10000)).zfill(12),
+                "sortKey": iso_date,
                 "dateLabel": item["date"],
                 "year": item["year"],
                 "title": item["event"],

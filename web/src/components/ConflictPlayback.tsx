@@ -1,25 +1,16 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { InfographicEvent, MapData } from "../types";
+import {
+  DAY_MS,
+  PLAYBACK_JUMPS,
+  TIMELINE_END,
+  TIMELINE_START,
+  formatTimelineDate,
+  sortKeyToMs,
+} from "../lib/timelineUtils";
 import { ConflictMap } from "./ConflictMap";
+import { EventDetailPanel } from "./EventDetailPanel";
 import { TimelineInfographic } from "./TimelineInfographic";
-
-const PLAYBACK_START = new Date("2023-10-01T00:00:00Z").getTime();
-const PLAYBACK_END = new Date("2026-07-04T00:00:00Z").getTime();
-const DAY_MS = 86_400_000;
-
-function sortKeyToMs(sortKey: string): number {
-  const iso = sortKey.length >= 10 ? sortKey.slice(0, 10) : sortKey;
-  const t = new Date(iso).getTime();
-  return Number.isNaN(t) ? PLAYBACK_START : t;
-}
-
-function formatPlayhead(ms: number): string {
-  return new Date(ms).toLocaleDateString(undefined, {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
-}
 
 interface ConflictPlaybackProps {
   mapData: MapData;
@@ -36,9 +27,10 @@ export function ConflictPlayback({
   showCoalition,
   showNarrative,
 }: ConflictPlaybackProps) {
-  const [asOfMs, setAsOfMs] = useState(PLAYBACK_START);
+  const [asOfMs, setAsOfMs] = useState(TIMELINE_END);
   const [playing, setPlaying] = useState(false);
-  const [speed, setSpeed] = useState(3);
+  const [speed, setSpeed] = useState(7);
+  const [selectedEvent, setSelectedEvent] = useState<InfographicEvent | null>(null);
   const rafRef = useRef<number | null>(null);
   const lastTickRef = useRef<number>(0);
 
@@ -57,9 +49,15 @@ export function ConflictPlayback({
     () =>
       [...visibleEvents]
         .sort((a, b) => sortKeyToMs(b.sortKey) - sortKeyToMs(a.sortKey))
-        .slice(0, 4),
+        .slice(0, 5),
     [visibleEvents],
   );
+
+  const jumpTo = useCallback((ms: number) => {
+    setPlaying(false);
+    setAsOfMs(Math.min(TIMELINE_END, Math.max(TIMELINE_START, ms)));
+    setSelectedEvent(null);
+  }, []);
 
   const tick = useCallback(
     (now: number) => {
@@ -69,9 +67,9 @@ export function ConflictPlayback({
         lastTickRef.current = now;
         setAsOfMs((prev) => {
           const next = prev + DAY_MS * speed;
-          if (next >= PLAYBACK_END) {
+          if (next >= TIMELINE_END) {
             setPlaying(false);
-            return PLAYBACK_END;
+            return TIMELINE_END;
           }
           return next;
         });
@@ -93,7 +91,15 @@ export function ConflictPlayback({
     };
   }, [playing, tick]);
 
-  const progress = ((asOfMs - PLAYBACK_START) / (PLAYBACK_END - PLAYBACK_START)) * 100;
+  const progress = ((asOfMs - TIMELINE_START) / (TIMELINE_END - TIMELINE_START)) * 100;
+
+  const handleSelectEvent = (event: InfographicEvent | null) => {
+    setSelectedEvent(event);
+    if (event) {
+      setPlaying(false);
+      setAsOfMs(sortKeyToMs(event.sortKey));
+    }
+  };
 
   return (
     <div className="playback-section">
@@ -104,10 +110,7 @@ export function ConflictPlayback({
         <button
           type="button"
           className="export-btn playback-secondary"
-          onClick={() => {
-            setPlaying(false);
-            setAsOfMs(PLAYBACK_START);
-          }}
+          onClick={() => jumpTo(TIMELINE_START)}
         >
           Reset
         </button>
@@ -118,23 +121,25 @@ export function ConflictPlayback({
             <option value={3}>3 days / tick</option>
             <option value={7}>1 week / tick</option>
             <option value={14}>2 weeks / tick</option>
+            <option value={30}>1 month / tick</option>
           </select>
         </label>
         <div className="playback-scrubber">
           <input
             type="range"
-            min={PLAYBACK_START}
-            max={PLAYBACK_END}
+            min={TIMELINE_START}
+            max={TIMELINE_END}
             step={DAY_MS}
             value={asOfMs}
             onChange={(e) => {
               setPlaying(false);
               setAsOfMs(Number(e.target.value));
+              setSelectedEvent(null);
             }}
             aria-label="Timeline scrubber"
           />
           <div className="playback-meta">
-            <strong>{formatPlayhead(asOfMs)}</strong>
+            <strong>{formatTimelineDate(asOfMs)}</strong>
             <span>
               {visibleEvents.length} events visible · {Math.round(progress)}% through conflict
             </span>
@@ -142,15 +147,38 @@ export function ConflictPlayback({
         </div>
       </div>
 
+      <div className="playback-jumps">
+        <span className="playback-jumps-label">Jump to:</span>
+        {PLAYBACK_JUMPS.map((jump) => (
+          <button
+            key={jump.label}
+            type="button"
+            className={`phase-chip compact${Math.abs(asOfMs - jump.ms) < DAY_MS ? " active" : ""}`}
+            onClick={() => jumpTo(jump.ms)}
+          >
+            {jump.label}
+          </button>
+        ))}
+      </div>
+
       {latestEvents.length > 0 && (
         <div className="playback-ticker">
           {latestEvents.map((e) => (
-            <div className={`playback-ticker-item kind-${e.kind}`} key={e.id}>
+            <button
+              type="button"
+              className={`playback-ticker-item kind-${e.kind}${selectedEvent?.id === e.id ? " selected" : ""}`}
+              key={e.id}
+              onClick={() => handleSelectEvent(e)}
+            >
               <time>{e.dateLabel}</time>
               <span>{e.title}</span>
-            </div>
+            </button>
           ))}
         </div>
+      )}
+
+      {selectedEvent && (
+        <EventDetailPanel event={selectedEvent} onClose={() => setSelectedEvent(null)} />
       )}
 
       <ConflictMap mapData={mapData} asOfDate={asOfDate} playbackMode />
@@ -162,6 +190,8 @@ export function ConflictPlayback({
         showNarrative={showNarrative}
         asOfDate={asOfDate}
         playheadPercent={progress}
+        selectedEventId={selectedEvent?.id ?? null}
+        onSelectEvent={handleSelectEvent}
       />
     </div>
   );

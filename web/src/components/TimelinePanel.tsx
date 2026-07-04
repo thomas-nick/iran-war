@@ -1,14 +1,12 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import type { ConflictRow, TimelineEvent, TimelineStats } from "../types";
-
-function eventBadgeClass(category: string): string {
-  if (category.includes("US Military")) return "badge badge-us-strike";
-  if (category.includes("Israel")) return "badge badge-israel-event";
-  if (category.includes("Iran")) return "badge badge-iran-event";
-  if (category === "Proxy Warfare") return "badge badge-proxy";
-  if (category === "Diplomacy") return "badge badge-diplomacy";
-  return "badge badge-event";
-}
+import {
+  TIMELINE_PHASES,
+  eventBadgeClass,
+  matchesTimelinePhase,
+  timelineEventMs,
+  type TimelinePhaseId,
+} from "../lib/timelineUtils";
 
 function fmt(n: number | null | undefined): string {
   if (n == null) return "—";
@@ -23,22 +21,56 @@ interface TimelinePanelProps {
 }
 
 export function TimelinePanel({ events, stats, filter, onFilterChange }: TimelinePanelProps) {
-  const filtered = events.filter((e) => {
-    if (filter === "All") return true;
-    if (filter === "US strikes") return e.isUsStrike;
-    if (filter === "US actions") return e.isUsAction;
-    if (filter === "Iran") return e.involvesIran;
-    if (filter === "Israel") return e.involvesIsrael;
-    return e.category === filter;
-  });
+  const [search, setSearch] = useState("");
+  const [phase, setPhase] = useState<TimelinePhaseId>("all");
+  const [sortOrder, setSortOrder] = useState<"newest" | "oldest">("newest");
 
-  const sorted = useMemo(
-    () => [...filtered].sort((a, b) => b.sortKey - a.sortKey || b.id - a.id),
-    [filtered],
-  );
+  const filtered = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    return events.filter((e) => {
+      if (filter === "US strikes" && !e.isUsStrike) return false;
+      if (filter === "US actions" && !e.isUsAction) return false;
+      if (filter === "Iran" && !e.involvesIran) return false;
+      if (filter === "Israel" && !e.involvesIsrael) return false;
+      if (
+        filter !== "All" &&
+        filter !== "US strikes" &&
+        filter !== "US actions" &&
+        filter !== "Iran" &&
+        filter !== "Israel" &&
+        e.category !== filter
+      ) {
+        return false;
+      }
+      if (!matchesTimelinePhase(e, phase)) return false;
+      if (!q) return true;
+      const haystack = [
+        e.event,
+        e.category,
+        e.keyActors,
+        e.location,
+        e.description,
+        e.impactOutcome,
+        String(e.year),
+        e.date,
+      ]
+        .join(" ")
+        .toLowerCase();
+      return haystack.includes(q);
+    });
+  }, [events, filter, phase, search]);
+
+  const sorted = useMemo(() => {
+    const list = [...filtered];
+    list.sort((a, b) => {
+      const diff = timelineEventMs(a) - timelineEventMs(b);
+      return sortOrder === "oldest" ? diff : -diff;
+    });
+    return list;
+  }, [filtered, sortOrder]);
 
   const usStrikes = useMemo(
-    () => [...events].filter((e) => e.isUsStrike).sort((a, b) => b.sortKey - a.sortKey || b.id - a.id),
+    () => [...events].filter((e) => e.isUsStrike).sort((a, b) => timelineEventMs(b) - timelineEventMs(a)),
     [events],
   );
 
@@ -46,7 +78,7 @@ export function TimelinePanel({ events, stats, filter, onFilterChange }: Timelin
     <>
       <div className="timeline-intro">
         <p>
-          Narrative context for attacks from{" "}
+          Narrative context from{" "}
           <a
             href="https://www.kaggle.com/datasets/muhammadshayan5839/iran-usa-conflict-2023-2026"
             target="_blank"
@@ -54,35 +86,92 @@ export function TimelinePanel({ events, stats, filter, onFilterChange }: Timelin
           >
             Kaggle — iran-usa-conflict-2023-2026
           </a>
-          . This dataset describes <strong>{stats.totalEvents} events</strong> from Oct 2023–Jul 2026,
-          including <strong>{stats.usStrikeEvents} documented US military strikes</strong>.
-          It adds context and descriptions but does not include per-strike numeric counts — those
-          come from the separate Iran–Israel statistics dataset on the Overview tab.
+          . <strong>{stats.totalEvents} events</strong> from Oct 2023–Jul 2026 — search, filter by phase,
+          or expand any card for full detail.
         </p>
       </div>
 
-      <div className="kpi-grid">
-        <div className="kpi">
-          <div className="kpi-label">Timeline events</div>
-          <div className="kpi-value">{stats.totalEvents}</div>
+      <div className="timeline-toolbar">
+        <div className="timeline-search-wrap">
+          <label className="sr-only" htmlFor="timeline-search">
+            Search timeline
+          </label>
+          <input
+            id="timeline-search"
+            type="search"
+            className="timeline-search"
+            placeholder="Search events, actors, locations…"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
         </div>
-        <div className="kpi">
-          <div className="kpi-label">US military strikes</div>
-          <div className="kpi-value">{stats.usStrikeEvents}</div>
-          <div className="kpi-sub">In this dataset</div>
+
+        <div className="timeline-phase-chips" role="tablist" aria-label="Conflict phase">
+          {TIMELINE_PHASES.map((p) => (
+            <button
+              key={p.id}
+              type="button"
+              role="tab"
+              aria-selected={phase === p.id}
+              className={`phase-chip${phase === p.id ? " active" : ""}`}
+              onClick={() => setPhase(p.id)}
+            >
+              {p.label}
+            </button>
+          ))}
         </div>
-        <div className="kpi">
-          <div className="kpi-label">Categories</div>
-          <div className="kpi-value">{Object.keys(stats.byCategory).length}</div>
+
+        <div className="filters timeline-filters-row">
+          <div className="filter-group">
+            <label htmlFor="timeline-filter">Category</label>
+            <select
+              id="timeline-filter"
+              value={filter}
+              onChange={(ev) => onFilterChange(ev.target.value)}
+            >
+              <option value="All">All events</option>
+              <option value="US strikes">US military strikes only</option>
+              <option value="US actions">All US actions (incl. policy/threats)</option>
+              <option value="Iran">Involving Iran</option>
+              <option value="Israel">Involving Israel</option>
+              <optgroup label="By category">
+                {Object.keys(stats.byCategory)
+                  .sort()
+                  .map((cat) => (
+                    <option key={cat} value={cat}>
+                      {cat}
+                    </option>
+                  ))}
+              </optgroup>
+            </select>
+          </div>
+
+          <div className="filter-group">
+            <label htmlFor="timeline-sort">Order</label>
+            <select
+              id="timeline-sort"
+              value={sortOrder}
+              onChange={(e) => setSortOrder(e.target.value as "newest" | "oldest")}
+            >
+              <option value="newest">Newest first</option>
+              <option value="oldest">Oldest first (story order)</option>
+            </select>
+          </div>
+
+          <span className="filter-count">
+            {sorted.length} of {stats.totalEvents} events
+          </span>
         </div>
       </div>
 
       {usStrikes.length > 0 && (
-        <div className="panel panel-wide us-strikes-panel">
-          <h2>US strike events in this dataset</h2>
+        <details className="panel panel-wide us-strikes-panel timeline-collapsible-panel">
+          <summary>
+            <h2>US strike events ({usStrikes.length})</h2>
+            <span className="panel-summary-hint">Major US military actions in this dataset</span>
+          </summary>
           <p className="panel-note">
-            Good news: you do not need a separate source for basic US strike coverage — this Kaggle
-            dataset already includes major US military actions. What it lacks is granular data
+            This Kaggle dataset includes major US military actions. What it lacks is granular data
             (exact sortie counts, munitions types, battle damage assessment).
           </p>
           <div className="us-strike-list">
@@ -94,91 +183,86 @@ export function TimelinePanel({ events, stats, filter, onFilterChange }: Timelin
               </div>
             ))}
           </div>
-        </div>
+        </details>
       )}
 
-      <div className="filters">
-        <div className="filter-group">
-          <label htmlFor="timeline-filter">Show</label>
-          <select
-            id="timeline-filter"
-            value={filter}
-            onChange={(ev) => onFilterChange(ev.target.value)}
-          >
-            <option value="All">All events</option>
-            <option value="US strikes">US military strikes only</option>
-            <option value="US actions">All US actions (incl. policy/threats)</option>
-            <option value="Iran">Involving Iran</option>
-            <option value="Israel">Involving Israel</option>
-            <optgroup label="By category">
-              {Object.keys(stats.byCategory)
-                .sort()
-                .map((cat) => (
-                  <option key={cat} value={cat}>
-                    {cat}
-                  </option>
-                ))}
-            </optgroup>
-          </select>
+      {sorted.length === 0 ? (
+        <div className="timeline-empty">
+          No events match your search or filters. Try clearing the search or choosing &ldquo;All&rdquo;.
         </div>
-        <span className="filter-count">{filtered.length} events · newest first</span>
-      </div>
-
-      <div className="timeline">
-        {sorted.map((event) => (
-          <article className="timeline-event" key={event.id}>
-            <div className="timeline-marker" />
-            <div className="timeline-content">
-              <div className="timeline-meta">
-                <time>{event.date}</time>
-                <span className={eventBadgeClass(event.category)}>{event.category}</span>
-                {event.isUsStrike && <span className="badge badge-us-strike">US strike</span>}
-              </div>
-              <h3>{event.event}</h3>
-              <div className="timeline-actors">
-                <strong>Actors:</strong> {event.keyActors} · <strong>Location:</strong>{" "}
-                {event.location}
-              </div>
-              <p className="timeline-desc">{event.description}</p>
-              <p className="timeline-impact">
-                <strong>Impact:</strong> {event.impactOutcome}
-              </p>
-
-              {event.relatedStats && event.relatedStats.length > 0 && (
-                <div className="timeline-linked-stats">
-                  <strong>Linked quantitative data (Feb–Mar 2026):</strong>
-                  <div className="table-wrap">
-                    <table>
-                      <thead>
-                        <tr>
-                          <th>Date</th>
-                          <th>Country</th>
-                          <th>Missiles</th>
-                          <th>Drones</th>
-                          <th>Deaths</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {event.relatedStats.map((r: ConflictRow) => (
-                          <tr key={`${r.country}-${r.date}`}>
-                            <td>{r.date}</td>
-                            <td className={r.country === "Iran" ? "country-iran" : "country-israel"}>
-                              {r.country}
-                            </td>
-                            <td>{r.missileAttacks}</td>
-                            <td>{fmt(r.droneAttacks)}</td>
-                            <td>{r.deaths}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
+      ) : (
+        <div className="timeline">
+          {sorted.map((event, index) => {
+            const showYearHeader =
+              index === 0 || sorted[index - 1].year !== event.year;
+            return (
+              <div key={event.id}>
+                {showYearHeader && (
+                  <div className="timeline-year-header" id={`year-${event.year}`}>
+                    {event.year}
                   </div>
-                </div>
-              )}
-            </div>
-          </article>
-        ))}
-      </div>
+                )}
+                <details className="timeline-event-details">
+                  <summary className="timeline-event-summary">
+                    <span className="timeline-marker" aria-hidden />
+                    <span className="timeline-summary-main">
+                      <span className="timeline-summary-meta">
+                        <time>{event.date}</time>
+                        <span className={eventBadgeClass(event.category)}>{event.category}</span>
+                        {event.isUsStrike && <span className="badge badge-us-strike">US strike</span>}
+                      </span>
+                      <span className="timeline-summary-title">{event.event}</span>
+                      <span className="timeline-summary-actors">{event.keyActors}</span>
+                    </span>
+                  </summary>
+                  <div className="timeline-content">
+                    <div className="timeline-actors">
+                      <strong>Actors:</strong> {event.keyActors} · <strong>Location:</strong>{" "}
+                      {event.location}
+                    </div>
+                    <p className="timeline-desc">{event.description}</p>
+                    <p className="timeline-impact">
+                      <strong>Impact:</strong> {event.impactOutcome}
+                    </p>
+
+                    {event.relatedStats && event.relatedStats.length > 0 && (
+                      <div className="timeline-linked-stats">
+                        <strong>Linked quantitative data (Feb–Mar 2026):</strong>
+                        <div className="table-wrap">
+                          <table>
+                            <thead>
+                              <tr>
+                                <th>Date</th>
+                                <th>Country</th>
+                                <th>Missiles</th>
+                                <th>Drones</th>
+                                <th>Deaths</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {event.relatedStats.map((r: ConflictRow) => (
+                                <tr key={`${r.country}-${r.date}`}>
+                                  <td>{r.date}</td>
+                                  <td className={r.country === "Iran" ? "country-iran" : "country-israel"}>
+                                    {r.country}
+                                  </td>
+                                  <td>{r.missileAttacks}</td>
+                                  <td>{fmt(r.droneAttacks)}</td>
+                                  <td>{r.deaths}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </details>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </>
   );
 }

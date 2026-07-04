@@ -93120,6 +93120,105 @@
   },
   "infographicEvents": [
     {
+      "id": "tl-36",
+      "kind": "narrative",
+      "sortKey": "2026-07-04",
+      "dateLabel": "July 4 2026",
+      "year": 2026,
+      "title": "Khamenei Funeral Processions Begin",
+      "subtitle": "Political Transition",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-35",
+      "kind": "narrative",
+      "sortKey": "2026-07-01",
+      "dateLabel": "July 1\u20133 2026",
+      "year": 2026,
+      "title": "Doha Technical Talks \u2014 MOU Implementation",
+      "subtitle": "Diplomacy",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-34",
+      "kind": "narrative",
+      "sortKey": "2026-06-30",
+      "dateLabel": "Late June 2026",
+      "year": 2026,
+      "title": "Post-MOU Military Incidents \u2014 Hormuz and Gulf Bases",
+      "subtitle": "Direct Military Conflict",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-33",
+      "kind": "narrative",
+      "sortKey": "2026-06-30",
+      "dateLabel": "June 2026",
+      "year": 2026,
+      "title": "Burgenstock Summit \u2014 De-confliction & Working Groups",
+      "subtitle": "Diplomacy",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-32",
+      "kind": "narrative",
+      "sortKey": "2026-06-17",
+      "dateLabel": "June 17\u201318 2026",
+      "year": 2026,
+      "title": "Islamabad Memorandum Signed \u2014 60-Day Roadmap",
+      "subtitle": "Diplomacy",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-31",
+      "kind": "narrative",
+      "sortKey": "2026-06-12",
+      "dateLabel": "June 12 2026",
+      "year": 2026,
+      "title": "US and Iran Agree Final MOU Text",
+      "subtitle": "Diplomacy",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-30",
+      "kind": "narrative",
+      "sortKey": "2026-05-31",
+      "dateLabel": "May\u2013June 2026",
+      "year": 2026,
+      "title": "Post-Ceasefire Friction Over Strait of Hormuz",
+      "subtitle": "Economic Warfare",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-29",
+      "kind": "narrative",
+      "sortKey": "2026-04-12",
+      "dateLabel": "April 12\u201313 2026",
+      "year": 2026,
+      "title": "First US\u2013Iran Direct Talks Since War Began",
+      "subtitle": "Diplomacy",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-28",
+      "kind": "narrative",
+      "sortKey": "2026-04-08",
+      "dateLabel": "April 8 2026",
+      "year": 2026,
+      "title": "Pakistan-Brokered Ceasefire Takes Effect",
+      "subtitle": "Diplomacy",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
       "id": "us-hormuz-threat-apr2026",
       "kind": "coalition_strike",
       "sortKey": "2026-04-06",
@@ -93134,6 +93233,50 @@
         "JDAM (likely)"
       ],
       "confidence": "threat"
+    },
+    {
+      "id": "tl-27",
+      "kind": "narrative",
+      "sortKey": "2026-04-06",
+      "dateLabel": "April 6 2026 (Deadline)",
+      "year": 2026,
+      "title": "US Ultimatum \u2013 Reopen Strait of Hormuz",
+      "subtitle": "US Military Threat",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-26",
+      "kind": "narrative",
+      "sortKey": "2026-03-27",
+      "dateLabel": "March\u2013April 2026",
+      "year": 2026,
+      "title": "Trump Offers Talks \u2013 Sanctions-for-Enrichment Deal",
+      "subtitle": "Diplomacy",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-25",
+      "kind": "narrative",
+      "sortKey": "2026-03-26",
+      "dateLabel": "March 2026",
+      "year": 2026,
+      "title": "Iran Protests Regime \u2013 Internal Pressure Mounts",
+      "subtitle": "Domestic Crisis",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-23",
+      "kind": "narrative",
+      "sortKey": "2026-03-24",
+      "dateLabel": "March 2026",
+      "year": 2026,
+      "title": "Iran Closes Strait of Hormuz",
+      "subtitle": "Economic Warfare",
+      "lane": 2,
+      "isUsStrike": false
     },
     {
       "id": "tp4-41-41",
@@ -93260,6 +93403,17 @@
       "subtitle": "Emad, Ghadr, Kheibar Shekan",
       "lane": 0,
       "usTargeted": true
+    },
+    {
+      "id": "tl-24",
+      "kind": "narrative",
+      "sortKey": "2026-03-08",
+      "dateLabel": "March 8 2026",
+      "year": 2026,
+      "title": "Mojtaba Khamenei Appointed New Supreme Leader",
+      "subtitle": "Political Transition",
+      "lane": 2,
+      "isUsStrike": false
     },
     {
       "id": "epic-fury-missile-production-mar2026",
@@ -93588,6 +93742,28 @@
       "usTargeted": true
     },
     {
+      "id": "tl-22",
+      "kind": "narrative",
+      "sortKey": "2026-02-28",
+      "dateLabel": "February 28 \u2013 March 2026",
+      "year": 2026,
+      "title": "Iran Retaliates \u2013 Missile and Drone Strikes",
+      "subtitle": "Iranian Military Action",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-21",
+      "kind": "narrative",
+      "sortKey": "2026-02-28",
+      "dateLabel": "February 28 2026",
+      "year": 2026,
+      "title": "Operation Epic Fury \u2013 US & Israel Strike Iran",
+      "subtitle": "Direct Military Conflict",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
       "id": "epic-fury-opening-feb2026",
       "kind": "coalition_strike",
       "sortKey": "2026-02-28",
@@ -93606,6 +93782,50 @@
         "Rampage"
       ],
       "confidence": "reported"
+    },
+    {
+      "id": "tl-20",
+      "kind": "narrative",
+      "sortKey": "2026-02-25",
+      "dateLabel": "February 25 2026",
+      "year": 2026,
+      "title": "Iran Claims Historic Nuclear Deal 'Within Reach'",
+      "subtitle": "Diplomacy",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-19",
+      "kind": "narrative",
+      "sortKey": "2026-02-24",
+      "dateLabel": "February 24 2026",
+      "year": 2026,
+      "title": "Trump State of the Union \u2013 Iran Nuclear Warning",
+      "subtitle": "US Political Action",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-18",
+      "kind": "narrative",
+      "sortKey": "2026-02-13",
+      "dateLabel": "February 13 2026",
+      "year": 2026,
+      "title": "Trump Calls for Regime Change in Iran",
+      "subtitle": "US Political Action",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-17",
+      "kind": "narrative",
+      "sortKey": "2026-01-18",
+      "dateLabel": "January 2026",
+      "year": 2026,
+      "title": "Iran Massacres Civilian Protesters",
+      "subtitle": "Domestic Crisis / Human Rights",
+      "lane": 2,
+      "isUsStrike": false
     },
     {
       "id": "us-nuclear-natanz-jun2025",
@@ -93651,6 +93871,17 @@
         "GBU-31 JDAM"
       ],
       "confidence": "reported"
+    },
+    {
+      "id": "tl-15",
+      "kind": "narrative",
+      "sortKey": "2025-06-25",
+      "dateLabel": "June 25 2025",
+      "year": 2025,
+      "title": "US Airstrikes on Iranian Nuclear Sites",
+      "subtitle": "US Military Action",
+      "lane": 2,
+      "isUsStrike": true
     },
     {
       "id": "tp3-22-22",
@@ -93868,6 +94099,17 @@
       "confidence": "reported"
     },
     {
+      "id": "tl-14",
+      "kind": "narrative",
+      "sortKey": "2025-06-15",
+      "dateLabel": "June 15 2025",
+      "year": 2025,
+      "title": "Iran and Houthis Strike Israel Jointly",
+      "subtitle": "Direct Military Conflict",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
       "id": "tp3-4-4",
       "kind": "iran_wave",
       "sortKey": "2025-06-14T19:00:00Z",
@@ -93912,6 +94154,17 @@
       "usTargeted": false
     },
     {
+      "id": "tl-13",
+      "kind": "narrative",
+      "sortKey": "2025-06-13",
+      "dateLabel": "June 13 2025",
+      "year": 2025,
+      "title": "Twelve-Day War Begins \u2013 Israel Strikes Iran",
+      "subtitle": "Direct Military Conflict",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
       "id": "israel-twelve-day-jun2025",
       "kind": "coalition_strike",
       "sortKey": "2025-06-13",
@@ -93929,6 +94182,28 @@
       "confidence": "reported"
     },
     {
+      "id": "tl-16",
+      "kind": "narrative",
+      "sortKey": "2025-01-17",
+      "dateLabel": "Late 2025",
+      "year": 2025,
+      "title": "Iran Protests Escalate",
+      "subtitle": "Domestic Crisis",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-12",
+      "kind": "narrative",
+      "sortKey": "2025-01-13",
+      "dateLabel": "January 2025",
+      "year": 2025,
+      "title": "Trump Returns \u2013 Maximum Pressure Resumed",
+      "subtitle": "US Policy",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
       "id": "israel-oct2024",
       "kind": "coalition_strike",
       "sortKey": "2024-10-26",
@@ -93943,6 +94218,28 @@
         "Delilah cruise missile"
       ],
       "confidence": "reported"
+    },
+    {
+      "id": "tl-10",
+      "kind": "narrative",
+      "sortKey": "2024-10-11",
+      "dateLabel": "October\u2013November 2024",
+      "year": 2024,
+      "title": "Israel Strikes Iranian Air Defenses & Missile Sites",
+      "subtitle": "Israeli Military Action",
+      "lane": 2,
+      "isUsStrike": false
+    },
+    {
+      "id": "tl-9",
+      "kind": "narrative",
+      "sortKey": "2024-10-10",
+      "dateLabel": "October 2024",
+      "year": 2024,
+      "title": "Iran Fires 180 Ballistic Missiles at Israel",
+      "subtitle": "Direct Iran\u2013Israel Conflict",
+      "lane": 2,
+      "isUsStrike": false
     },
     {
       "id": "tp2-2-2",
@@ -93965,6 +94262,17 @@
       "subtitle": "Emad, Ghadr, Kheibar Shekan",
       "lane": 0,
       "usTargeted": false
+    },
+    {
+      "id": "tl-8",
+      "kind": "narrative",
+      "sortKey": "2024-04-19",
+      "dateLabel": "April 19 2024",
+      "year": 2024,
+      "title": "Israel Retaliatory Strike on Iran",
+      "subtitle": "Direct Israel\u2013Iran Conflict",
+      "lane": 2,
+      "isUsStrike": false
     },
     {
       "id": "israel-apr2024",
@@ -94004,317 +94312,9 @@
       "usTargeted": false
     },
     {
-      "id": "tl-36",
-      "kind": "narrative",
-      "sortKey": "000020260704",
-      "dateLabel": "July 4 2026",
-      "year": 2026,
-      "title": "Khamenei Funeral Processions Begin",
-      "subtitle": "Political Transition",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-35",
-      "kind": "narrative",
-      "sortKey": "000020260701",
-      "dateLabel": "July 1\u20133 2026",
-      "year": 2026,
-      "title": "Doha Technical Talks \u2014 MOU Implementation",
-      "subtitle": "Diplomacy",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-34",
-      "kind": "narrative",
-      "sortKey": "000020260635",
-      "dateLabel": "Late June 2026",
-      "year": 2026,
-      "title": "Post-MOU Military Incidents \u2014 Hormuz and Gulf Bases",
-      "subtitle": "Direct Military Conflict",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-33",
-      "kind": "narrative",
-      "sortKey": "000020260634",
-      "dateLabel": "June 2026",
-      "year": 2026,
-      "title": "Burgenstock Summit \u2014 De-confliction & Working Groups",
-      "subtitle": "Diplomacy",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-32",
-      "kind": "narrative",
-      "sortKey": "000020260617",
-      "dateLabel": "June 17\u201318 2026",
-      "year": 2026,
-      "title": "Islamabad Memorandum Signed \u2014 60-Day Roadmap",
-      "subtitle": "Diplomacy",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-31",
-      "kind": "narrative",
-      "sortKey": "000020260612",
-      "dateLabel": "June 12 2026",
-      "year": 2026,
-      "title": "US and Iran Agree Final MOU Text",
-      "subtitle": "Diplomacy",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-30",
-      "kind": "narrative",
-      "sortKey": "000020260531",
-      "dateLabel": "May\u2013June 2026",
-      "year": 2026,
-      "title": "Post-Ceasefire Friction Over Strait of Hormuz",
-      "subtitle": "Economic Warfare",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-29",
-      "kind": "narrative",
-      "sortKey": "000020260412",
-      "dateLabel": "April 12\u201313 2026",
-      "year": 2026,
-      "title": "First US\u2013Iran Direct Talks Since War Began",
-      "subtitle": "Diplomacy",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-28",
-      "kind": "narrative",
-      "sortKey": "000020260408",
-      "dateLabel": "April 8 2026",
-      "year": 2026,
-      "title": "Pakistan-Brokered Ceasefire Takes Effect",
-      "subtitle": "Diplomacy",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-27",
-      "kind": "narrative",
-      "sortKey": "000020260406",
-      "dateLabel": "April 6 2026 (Deadline)",
-      "year": 2026,
-      "title": "US Ultimatum \u2013 Reopen Strait of Hormuz",
-      "subtitle": "US Military Threat",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-26",
-      "kind": "narrative",
-      "sortKey": "000020260327",
-      "dateLabel": "March\u2013April 2026",
-      "year": 2026,
-      "title": "Trump Offers Talks \u2013 Sanctions-for-Enrichment Deal",
-      "subtitle": "Diplomacy",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-25",
-      "kind": "narrative",
-      "sortKey": "000020260326",
-      "dateLabel": "March 2026",
-      "year": 2026,
-      "title": "Iran Protests Regime \u2013 Internal Pressure Mounts",
-      "subtitle": "Domestic Crisis",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-23",
-      "kind": "narrative",
-      "sortKey": "000020260324",
-      "dateLabel": "March 2026",
-      "year": 2026,
-      "title": "Iran Closes Strait of Hormuz",
-      "subtitle": "Economic Warfare",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-24",
-      "kind": "narrative",
-      "sortKey": "000020260308",
-      "dateLabel": "March 8 2026",
-      "year": 2026,
-      "title": "Mojtaba Khamenei Appointed New Supreme Leader",
-      "subtitle": "Political Transition",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-22",
-      "kind": "narrative",
-      "sortKey": "000020260228",
-      "dateLabel": "February 28 \u2013 March 2026",
-      "year": 2026,
-      "title": "Iran Retaliates \u2013 Missile and Drone Strikes",
-      "subtitle": "Iranian Military Action",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-21",
-      "kind": "narrative",
-      "sortKey": "000020260228",
-      "dateLabel": "February 28 2026",
-      "year": 2026,
-      "title": "Operation Epic Fury \u2013 US & Israel Strike Iran",
-      "subtitle": "Direct Military Conflict",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-20",
-      "kind": "narrative",
-      "sortKey": "000020260225",
-      "dateLabel": "February 25 2026",
-      "year": 2026,
-      "title": "Iran Claims Historic Nuclear Deal 'Within Reach'",
-      "subtitle": "Diplomacy",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-19",
-      "kind": "narrative",
-      "sortKey": "000020260224",
-      "dateLabel": "February 24 2026",
-      "year": 2026,
-      "title": "Trump State of the Union \u2013 Iran Nuclear Warning",
-      "subtitle": "US Political Action",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-18",
-      "kind": "narrative",
-      "sortKey": "000020260213",
-      "dateLabel": "February 13 2026",
-      "year": 2026,
-      "title": "Trump Calls for Regime Change in Iran",
-      "subtitle": "US Political Action",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-17",
-      "kind": "narrative",
-      "sortKey": "000020260118",
-      "dateLabel": "January 2026",
-      "year": 2026,
-      "title": "Iran Massacres Civilian Protesters",
-      "subtitle": "Domestic Crisis / Human Rights",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-15",
-      "kind": "narrative",
-      "sortKey": "000020250625",
-      "dateLabel": "June 25 2025",
-      "year": 2025,
-      "title": "US Airstrikes on Iranian Nuclear Sites",
-      "subtitle": "US Military Action",
-      "lane": 2,
-      "isUsStrike": true
-    },
-    {
-      "id": "tl-14",
-      "kind": "narrative",
-      "sortKey": "000020250615",
-      "dateLabel": "June 15 2025",
-      "year": 2025,
-      "title": "Iran and Houthis Strike Israel Jointly",
-      "subtitle": "Direct Military Conflict",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-13",
-      "kind": "narrative",
-      "sortKey": "000020250613",
-      "dateLabel": "June 13 2025",
-      "year": 2025,
-      "title": "Twelve-Day War Begins \u2013 Israel Strikes Iran",
-      "subtitle": "Direct Military Conflict",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-16",
-      "kind": "narrative",
-      "sortKey": "000020250117",
-      "dateLabel": "Late 2025",
-      "year": 2025,
-      "title": "Iran Protests Escalate",
-      "subtitle": "Domestic Crisis",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-12",
-      "kind": "narrative",
-      "sortKey": "000020250113",
-      "dateLabel": "January 2025",
-      "year": 2025,
-      "title": "Trump Returns \u2013 Maximum Pressure Resumed",
-      "subtitle": "US Policy",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-10",
-      "kind": "narrative",
-      "sortKey": "000020241011",
-      "dateLabel": "October\u2013November 2024",
-      "year": 2024,
-      "title": "Israel Strikes Iranian Air Defenses & Missile Sites",
-      "subtitle": "Israeli Military Action",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-9",
-      "kind": "narrative",
-      "sortKey": "000020241010",
-      "dateLabel": "October 2024",
-      "year": 2024,
-      "title": "Iran Fires 180 Ballistic Missiles at Israel",
-      "subtitle": "Direct Iran\u2013Israel Conflict",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
-      "id": "tl-8",
-      "kind": "narrative",
-      "sortKey": "000020240419",
-      "dateLabel": "April 19 2024",
-      "year": 2024,
-      "title": "Israel Retaliatory Strike on Iran",
-      "subtitle": "Direct Israel\u2013Iran Conflict",
-      "lane": 2,
-      "isUsStrike": false
-    },
-    {
       "id": "tl-7",
       "kind": "narrative",
-      "sortKey": "000020240413",
+      "sortKey": "2024-04-13",
       "dateLabel": "April 13 2024",
       "year": 2024,
       "title": "Iran Launches First Direct Strike on Israel",
@@ -94325,7 +94325,7 @@
     {
       "id": "tl-6",
       "kind": "narrative",
-      "sortKey": "000020240401",
+      "sortKey": "2024-04-01",
       "dateLabel": "April 1 2024",
       "year": 2024,
       "title": "Israel Strikes Iranian Consulate in Damascus",
@@ -94336,7 +94336,7 @@
     {
       "id": "tl-5",
       "kind": "narrative",
-      "sortKey": "000020240202",
+      "sortKey": "2024-02-02",
       "dateLabel": "February 2 2024",
       "year": 2024,
       "title": "US Retaliatory Strikes \u2013 Operation Inherent Resolve",
@@ -94347,7 +94347,7 @@
     {
       "id": "tl-11",
       "kind": "narrative",
-      "sortKey": "000020240112",
+      "sortKey": "2024-01-12",
       "dateLabel": "Late 2024",
       "year": 2024,
       "title": "Assad Regime Falls in Syria",
@@ -94358,7 +94358,7 @@
     {
       "id": "tl-4",
       "kind": "narrative",
-      "sortKey": "000020240105",
+      "sortKey": "2024-01-05",
       "dateLabel": "January 2024",
       "year": 2024,
       "title": "Jordan Tower 22 Attack",
@@ -94369,7 +94369,7 @@
     {
       "id": "tl-3",
       "kind": "narrative",
-      "sortKey": "000020231104",
+      "sortKey": "2023-11-04",
       "dateLabel": "November\u2013December 2023",
       "year": 2023,
       "title": "Houthi Red Sea Campaign Begins",
@@ -94380,7 +94380,7 @@
     {
       "id": "tl-2",
       "kind": "narrative",
-      "sortKey": "000020231026",
+      "sortKey": "2023-10-26",
       "dateLabel": "October 26 2023",
       "year": 2023,
       "title": "US Airstrikes on Iran-backed Facilities",
@@ -94391,7 +94391,7 @@
     {
       "id": "tl-1",
       "kind": "narrative",
-      "sortKey": "000020231017",
+      "sortKey": "2023-10-17",
       "dateLabel": "October 17 2023",
       "year": 2023,
       "title": "Iran-backed Militia Attacks Begin",
@@ -94402,7 +94402,7 @@
     {
       "id": "tl-0",
       "kind": "narrative",
-      "sortKey": "000020231007",
+      "sortKey": "2023-10-07",
       "dateLabel": "October 7 2023",
       "year": 2023,
       "title": "Hamas Attack on Israel",
@@ -96506,149 +96506,6 @@
   ],
   "crossReference": {
     "inventoryByCountry": {
-      "Iran": [
-        {
-          "name": "Dezful",
-          "countries": [
-            "Iran"
-          ],
-          "category": "Ballistic",
-          "rangeKm": 1000.0,
-          "rangeText": "1000 km",
-          "maxSpeedMach": 8.6,
-          "maxSpeedText": "Mach 8.6",
-          "sourceUrl": "https://www.globalmilitary.net/missiles/dezful/",
-          "sourceSite": "GlobalMilitary.net",
-          "inventoryKind": "missile"
-        },
-        {
-          "name": "Emad",
-          "countries": [
-            "Iran"
-          ],
-          "category": "Ballistic",
-          "rangeKm": 1700.0,
-          "rangeText": "1700 km",
-          "maxSpeedMach": 13.6,
-          "maxSpeedText": "Mach 13.6",
-          "sourceUrl": "https://www.globalmilitary.net/missiles/emad/",
-          "sourceSite": "GlobalMilitary.net",
-          "inventoryKind": "missile"
-        },
-        {
-          "name": "Fateh-110",
-          "countries": [
-            "Iran"
-          ],
-          "category": "Ballistic",
-          "rangeKm": 300.0,
-          "rangeText": "300 km",
-          "maxSpeedMach": 4.9,
-          "maxSpeedText": "Mach 4.9",
-          "sourceUrl": "https://www.globalmilitary.net/missiles/fateh-110/",
-          "sourceSite": "GlobalMilitary.net",
-          "inventoryKind": "missile"
-        },
-        {
-          "name": "Fateh-313",
-          "countries": [
-            "Iran"
-          ],
-          "category": "Ballistic",
-          "rangeKm": 500.0,
-          "rangeText": "500 km",
-          "maxSpeedMach": 5.0,
-          "maxSpeedText": "Mach 5.0",
-          "sourceUrl": "https://www.globalmilitary.net/missiles/fateh-313/",
-          "sourceSite": "GlobalMilitary.net",
-          "inventoryKind": "missile"
-        },
-        {
-          "name": "Fattah-1",
-          "countries": [
-            "Iran"
-          ],
-          "category": "Ballistic",
-          "rangeKm": 1400.0,
-          "rangeText": "1400 km",
-          "maxSpeedMach": 18.5,
-          "maxSpeedText": "Mach 18.5",
-          "sourceUrl": "https://www.globalmilitary.net/missiles/fattah-1/",
-          "sourceSite": "GlobalMilitary.net",
-          "inventoryKind": "missile"
-        },
-        {
-          "name": "Ghadr-110",
-          "countries": [
-            "Iran"
-          ],
-          "category": "Ballistic",
-          "rangeKm": 2000.0,
-          "rangeText": "2000 km",
-          "maxSpeedMach": 13.0,
-          "maxSpeedText": "Mach 13.0",
-          "sourceUrl": "https://www.globalmilitary.net/missiles/ghadr-110/",
-          "sourceSite": "GlobalMilitary.net",
-          "inventoryKind": "missile"
-        },
-        {
-          "name": "Kheibar / Khorramshahr-4",
-          "countries": [
-            "Iran"
-          ],
-          "category": "Ballistic",
-          "rangeKm": 2000.0,
-          "rangeText": "2000 km",
-          "maxSpeedMach": 19.8,
-          "maxSpeedText": "Mach 19.8",
-          "sourceUrl": "https://www.globalmilitary.net/missiles/kheibar/",
-          "sourceSite": "GlobalMilitary.net",
-          "inventoryKind": "missile"
-        },
-        {
-          "name": "Khorramshahr",
-          "countries": [
-            "Iran"
-          ],
-          "category": "Ballistic",
-          "rangeKm": 2000.0,
-          "rangeText": "2000 km",
-          "maxSpeedMach": 19.8,
-          "maxSpeedText": "Mach 19.8",
-          "sourceUrl": "https://www.globalmilitary.net/missiles/khorramshahr/",
-          "sourceSite": "GlobalMilitary.net",
-          "inventoryKind": "missile"
-        },
-        {
-          "name": "Soumar",
-          "countries": [
-            "Iran"
-          ],
-          "category": "Cruise",
-          "rangeKm": 700.0,
-          "rangeText": "700 km",
-          "maxSpeedMach": 0.65,
-          "maxSpeedText": "800 km/h",
-          "sourceUrl": "https://www.globalmilitary.net/missiles/soumar/",
-          "sourceSite": "GlobalMilitary.net",
-          "inventoryKind": "missile"
-        },
-        {
-          "name": "Mk 81",
-          "countries": [
-            "United States",
-            "Iran"
-          ],
-          "category": "Unguided Bomb",
-          "rangeKm": null,
-          "rangeText": "\u2014",
-          "maxSpeedMach": null,
-          "maxSpeedText": "\u2014",
-          "sourceUrl": "https://www.globalmilitary.net/bombs/mk-81/",
-          "sourceSite": "GlobalMilitary.net",
-          "inventoryKind": "bomb"
-        }
-      ],
       "Israel": [
         {
           "name": "Jericho",
@@ -96870,23 +96727,178 @@
           "sourceSite": "GlobalMilitary.net",
           "inventoryKind": "bomb"
         }
+      ],
+      "Iran": [
+        {
+          "name": "Dezful",
+          "countries": [
+            "Iran"
+          ],
+          "category": "Ballistic",
+          "rangeKm": 1000.0,
+          "rangeText": "1000 km",
+          "maxSpeedMach": 8.6,
+          "maxSpeedText": "Mach 8.6",
+          "sourceUrl": "https://www.globalmilitary.net/missiles/dezful/",
+          "sourceSite": "GlobalMilitary.net",
+          "inventoryKind": "missile"
+        },
+        {
+          "name": "Emad",
+          "countries": [
+            "Iran"
+          ],
+          "category": "Ballistic",
+          "rangeKm": 1700.0,
+          "rangeText": "1700 km",
+          "maxSpeedMach": 13.6,
+          "maxSpeedText": "Mach 13.6",
+          "sourceUrl": "https://www.globalmilitary.net/missiles/emad/",
+          "sourceSite": "GlobalMilitary.net",
+          "inventoryKind": "missile"
+        },
+        {
+          "name": "Fateh-110",
+          "countries": [
+            "Iran"
+          ],
+          "category": "Ballistic",
+          "rangeKm": 300.0,
+          "rangeText": "300 km",
+          "maxSpeedMach": 4.9,
+          "maxSpeedText": "Mach 4.9",
+          "sourceUrl": "https://www.globalmilitary.net/missiles/fateh-110/",
+          "sourceSite": "GlobalMilitary.net",
+          "inventoryKind": "missile"
+        },
+        {
+          "name": "Fateh-313",
+          "countries": [
+            "Iran"
+          ],
+          "category": "Ballistic",
+          "rangeKm": 500.0,
+          "rangeText": "500 km",
+          "maxSpeedMach": 5.0,
+          "maxSpeedText": "Mach 5.0",
+          "sourceUrl": "https://www.globalmilitary.net/missiles/fateh-313/",
+          "sourceSite": "GlobalMilitary.net",
+          "inventoryKind": "missile"
+        },
+        {
+          "name": "Fattah-1",
+          "countries": [
+            "Iran"
+          ],
+          "category": "Ballistic",
+          "rangeKm": 1400.0,
+          "rangeText": "1400 km",
+          "maxSpeedMach": 18.5,
+          "maxSpeedText": "Mach 18.5",
+          "sourceUrl": "https://www.globalmilitary.net/missiles/fattah-1/",
+          "sourceSite": "GlobalMilitary.net",
+          "inventoryKind": "missile"
+        },
+        {
+          "name": "Ghadr-110",
+          "countries": [
+            "Iran"
+          ],
+          "category": "Ballistic",
+          "rangeKm": 2000.0,
+          "rangeText": "2000 km",
+          "maxSpeedMach": 13.0,
+          "maxSpeedText": "Mach 13.0",
+          "sourceUrl": "https://www.globalmilitary.net/missiles/ghadr-110/",
+          "sourceSite": "GlobalMilitary.net",
+          "inventoryKind": "missile"
+        },
+        {
+          "name": "Kheibar / Khorramshahr-4",
+          "countries": [
+            "Iran"
+          ],
+          "category": "Ballistic",
+          "rangeKm": 2000.0,
+          "rangeText": "2000 km",
+          "maxSpeedMach": 19.8,
+          "maxSpeedText": "Mach 19.8",
+          "sourceUrl": "https://www.globalmilitary.net/missiles/kheibar/",
+          "sourceSite": "GlobalMilitary.net",
+          "inventoryKind": "missile"
+        },
+        {
+          "name": "Khorramshahr",
+          "countries": [
+            "Iran"
+          ],
+          "category": "Ballistic",
+          "rangeKm": 2000.0,
+          "rangeText": "2000 km",
+          "maxSpeedMach": 19.8,
+          "maxSpeedText": "Mach 19.8",
+          "sourceUrl": "https://www.globalmilitary.net/missiles/khorramshahr/",
+          "sourceSite": "GlobalMilitary.net",
+          "inventoryKind": "missile"
+        },
+        {
+          "name": "Soumar",
+          "countries": [
+            "Iran"
+          ],
+          "category": "Cruise",
+          "rangeKm": 700.0,
+          "rangeText": "700 km",
+          "maxSpeedMach": 0.65,
+          "maxSpeedText": "800 km/h",
+          "sourceUrl": "https://www.globalmilitary.net/missiles/soumar/",
+          "sourceSite": "GlobalMilitary.net",
+          "inventoryKind": "missile"
+        },
+        {
+          "name": "Mk 81",
+          "countries": [
+            "United States",
+            "Iran"
+          ],
+          "category": "Unguided Bomb",
+          "rangeKm": null,
+          "rangeText": "\u2014",
+          "maxSpeedMach": null,
+          "maxSpeedText": "\u2014",
+          "sourceUrl": "https://www.globalmilitary.net/bombs/mk-81/",
+          "sourceSite": "GlobalMilitary.net",
+          "inventoryKind": "bomb"
+        }
       ]
     },
     "conflictTotals": {
-      "Iran": {
-        "missileAttacks": 650,
-        "droneAttacks": 390,
-        "deaths": 1770,
-        "injuries": 11000
-      },
       "Israel": {
         "missileAttacks": 180,
         "droneAttacks": 110,
         "deaths": 33,
         "injuries": 850
+      },
+      "Iran": {
+        "missileAttacks": 650,
+        "droneAttacks": 390,
+        "deaths": 1770,
+        "injuries": 11000
       }
     },
     "categorySummary": [
+      {
+        "country": "Israel",
+        "category": "Ballistic",
+        "inventoryCount": 2,
+        "maxRangeKm": 500.0,
+        "avgRangeKm": 465.0,
+        "reportedMissileAttacks": 180,
+        "systems": [
+          "Jericho",
+          "LORA"
+        ]
+      },
       {
         "country": "Iran",
         "category": "Ballistic",
@@ -96907,15 +96919,12 @@
       },
       {
         "country": "Israel",
-        "category": "Ballistic",
-        "inventoryCount": 2,
-        "maxRangeKm": 500.0,
-        "avgRangeKm": 465.0,
+        "category": "Cruise",
+        "inventoryCount": 0,
+        "maxRangeKm": null,
+        "avgRangeKm": null,
         "reportedMissileAttacks": 180,
-        "systems": [
-          "Jericho",
-          "LORA"
-        ]
+        "systems": []
       },
       {
         "country": "Iran",
@@ -96930,24 +96939,6 @@
       },
       {
         "country": "Israel",
-        "category": "Cruise",
-        "inventoryCount": 0,
-        "maxRangeKm": null,
-        "avgRangeKm": null,
-        "reportedMissileAttacks": 180,
-        "systems": []
-      },
-      {
-        "country": "Iran",
-        "category": "Air-to-Surface",
-        "inventoryCount": 0,
-        "maxRangeKm": null,
-        "avgRangeKm": null,
-        "reportedMissileAttacks": 650,
-        "systems": []
-      },
-      {
-        "country": "Israel",
         "category": "Air-to-Surface",
         "inventoryCount": 4,
         "maxRangeKm": 300.0,
@@ -96959,6 +96950,15 @@
           "Delilah",
           "Rampage"
         ]
+      },
+      {
+        "country": "Iran",
+        "category": "Air-to-Surface",
+        "inventoryCount": 0,
+        "maxRangeKm": null,
+        "avgRangeKm": null,
+        "reportedMissileAttacks": 650,
+        "systems": []
       }
     ]
   },
